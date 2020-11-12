@@ -1,0 +1,2 @@
+#define STEAMCPPWRAPPERCUSTOM_API __declspec(dllexport)
+#define STEAMCPPWRAPPERCUSTOM_API __declspec(dllimport)

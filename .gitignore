@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+*.pdb
+*.ipdb
+*.tlog
+*.pch
+*.ipch
+*.opendb
+*.suo
+*.db-wal
+*.db-shm
+*.db
+Release/
