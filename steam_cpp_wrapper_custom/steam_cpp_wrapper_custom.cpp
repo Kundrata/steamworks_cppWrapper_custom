@@ -17,8 +17,10 @@ extern "C" {
     __declspec(dllexport)
     bool c_SteamAPI_Init(void)
     {
-        return
+        bool ret =
             SteamAPI_Init();
+
+        return ret;
     }
 }
 
@@ -26,7 +28,16 @@ extern "C" {
     __declspec(dllexport)
         bool c_SteamAPI_RestartAppIfNecessary(uint32_t id)
     {
-        return
+        //return SteamAPI_RestartAppIfNecessary(id);
+
+        bool ret =
             SteamAPI_RestartAppIfNecessary(id);
+
+        if (ret)
+            OutputDebugStringA("steam wrapper, ret true");
+        else
+            OutputDebugStringA("steam wrapper, ret false");
+
+        return ret;
     }
 }
