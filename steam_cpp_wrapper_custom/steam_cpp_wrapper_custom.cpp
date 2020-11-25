@@ -105,7 +105,7 @@ public:
         //m_pAchievements = Achievements;
         //m_iNumAchievements = NumAchievements;
         RequestStats();
-        MessageBoxA(0, 0, 0, 0);
+        //MessageBoxA(0, 0, 0, 0);
     }
 
     ~CSteamAchievements() {}
