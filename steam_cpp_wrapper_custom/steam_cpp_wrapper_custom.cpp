@@ -259,17 +259,19 @@ extern "C" {
 
 extern "C" {
     __declspec(dllexport)
-        bool c_SteamAPI_RestartAppIfNecessary(uint32_t id)
+       bool c_SteamAPI_RestartAppIfNecessary(uint32_t id)
     {
         //return SteamAPI_RestartAppIfNecessary(id);
 
-        bool ret =
-            SteamAPI_RestartAppIfNecessary(id);
+        bool ret = SteamAPI_RestartAppIfNecessary(id);
 
-        /*if (ret)
-            OutputDebugStringA("steam wrapper, ret true");
-        else
-            OutputDebugStringA("steam wrapper, ret false");*/
+        //util::dbgf("steam restart app if nec: %s", ret ? "true" : "false");
+
+        // need to throw an exception here, otherwise it doesn't work
+        // wtf right?
+        try {
+            throw std::exception();
+        }catch(...){}
 
         return ret;
     }
